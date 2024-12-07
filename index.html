@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albedo vs Energy Regression</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="masthead">
+            <div class="site-info">
+                <h1 class="site-name">Regresi Albedo dan Energi</h1>
+                <p class="site-description">A simple regression model between albedo and energy values (for numerical methods project only.)</p>
+            </div>
+        </header>
+
+        <section class="intro">
+            <form id="regressionForm">
+                <label for="albedo">Masukkan Nilai Albedo:</label><br>
+                <input type="text" id="albedo" placeholder="e.g., 0.5, 0.10, 0.15"><br>
+                <label for="energy">Masukkan Nilai Energi:</label><br>
+                <input type="text" id="energy" placeholder="e.g., 90, 85, 80"><br>
+                <button type="button" id="submit">Hasil Regresi</button>
+            </form>
+        </section>
+
+        <section class="output" id="output">
+            <h2>Results:</h2>
+            <p id="results"></p>
+            <!-- Canvas for the graph -->
+            <canvas id="plot" width="600" height="400"></canvas>
+        </section>
+
+        <section class="history">
+            <h2>History:</h2>
+            <ul id="historyList"></ul>
+        </section>
+
+        <section class="loading" id="loading" style="display: none;">
+            <p>Calculating...</p>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
